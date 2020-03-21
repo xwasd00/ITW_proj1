@@ -1,0 +1,176 @@
+/************************** general style **************************/
+html {
+	min-width: 850px;
+	margin: 0 auto;
+}
+body {
+	margin: 0; 
+	background-image: url(img/bg.jpg);
+	background-repeat: repeat-y;
+	background-size: 100% auto;
+}
+
+.content {
+	max-width: 1140px;
+	margin: auto;
+	padding-left: 15px;
+	padding-right: 15px;
+	
+}
+.dark > .content{
+	text-align: center;
+	margin-top: 20vh;
+}
+
+/***************************** END *********************************/
+
+/************** navbar + section-home + section-about **************/
+#navbar {
+	text-align: center;
+	margin: auto;
+	margin-bottom: 10vh;
+	width: 50%;
+	min-width: 850px;
+}
+#navbar li{
+	display: inline;
+	margin: auto;
+	text-align: center;
+}
+#section-home{
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+	width: 50%;
+	min-width: 850px;
+	height: 95vh;
+	overflow: auto;
+}
+#section-about {
+    margin: 0 auto;
+    background-color: white;
+    width: 100%;
+    overflow: auto;
+    
+}
+#section-about img,#section-about .descript {
+	min-width: 350px;
+	padding: 1%;
+	width: 31%;
+	float: left;
+}
+/**************************** END **********************************/
+
+/************************ section-menu *****************************/
+#section-menu {
+	margin: 0 auto;
+    background-color: white;
+    width: 100%;
+    overflow: auto;
+}
+#section-menu h2, .tabs {
+	text-align: center;
+	padding: 1em;
+}
+.tabs {
+	margin: auto;
+}
+.tabs li{
+	display: inline;
+	margin: auto;
+	text-align: center;
+	padding: 1.3em;
+	border-style: solid;
+}
+.menucols ul {
+	width: 48%;
+	min-width: 500px;
+	padding: 1%;
+	float: left;
+}
+.menucols li {
+	display: flex;
+}
+.menuitem {
+	width: 85%;
+	float: left;
+}
+.price {
+	width: 15%;
+	padding-top: 20px;
+	text-align: center;
+	vertical-align: middle;
+}
+/****************************** END *******************************/
+
+/********** delicious and nutritious + section-gallery ************/
+.dark > .content {
+	margin: auto;
+	overflow: auto;
+	margin-top: 10vh;
+}
+.dark > .content > p {
+	margin-bottom: 10vh;
+}
+#section-gallery {
+	margin: 0 auto;
+    background-color: white;
+    width: 100%;
+    overflow: auto;
+    text-align: center;
+    padding-bottom: 5em;
+}
+#section-gallery h2 {
+	text-align: center;
+	padding: 1em;
+}
+#section-gallery img {
+	padding: 1%;
+	width: 31%;
+	float: left;
+}
+/****************************** END *******************************/
+
+/********************** section-testimonials **********************/
+#section-testimonials {
+	margin: 0 auto;
+    background-color: #aaaaff;
+    width: 100%;
+    overflow: auto;
+}
+.testimonial {
+	text-align: center;
+	width: 31%;
+	float: left;
+	padding: 1%;
+}
+
+/****************************** END *******************************/
+
+/************************ section-events **************************/
+#section-events {
+	margin: 0 auto;
+    background-color: white;
+    width: 100%;
+    overflow: auto;
+    
+}
+#section-events .card {
+	min-width: 350px;
+	padding: 1%;
+	width: 31%;
+	float: left;
+}
+.card-img-top {
+    width: 100%;
+}
+/*************************** END **********************************/
+
+/************************* footer *********************************/
+#footer {
+	margin: 0 auto;
+	text-align: center;
+	background-color: white;
+	overflow: auto;
+}
+/*************************** END **********************************/
