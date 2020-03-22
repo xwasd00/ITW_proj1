@@ -4,60 +4,129 @@ html {
 	margin: 0 auto;
 }
 body {
-	margin: 0; 
+	padding-top: 0;
+	margin: 0;
+	overflow: auto;
 	background-image: url(img/bg.jpg);
 	background-repeat: repeat-y;
-	background-size: 100% auto;
+	background-size: 100% 95vh;
 }
-
 .content {
 	max-width: 1140px;
-	margin: auto;
 	padding-left: 15px;
 	padding-right: 15px;
-	
+	font-size: 16px;
+	font-family: Montserrat;
+	font-weight: 300;
+	color: #868e96;
+	line-height: 2.2;
+	overflow: auto;
+	margin: auto;
 }
-.dark > .content{
+.content h2 {
 	text-align: center;
-	margin-top: 20vh;
+	color: #212529;
+	font-size: 32px;
+	text-transform: uppercase;
+	font-weight: 300;
 }
-
+.dark .content{
+	text-align: center;
+	color: rgba(255, 255, 255, 0.8);
+	margin: 0;
+}
+#main {
+	overflow: auto;
+	margin-top: 0;
+	padding-top: 0;	
+}
+.dark a {
+	text-decoration: none;
+	color: rgba(255, 255, 255, 0.8);
+}
+.dark p {
+	margin: auto;
+	width: 490px;
+}
+.dark h1, .dark h2 {
+	color: #ffffff;
+	font-weight: 300;
+	font-size: 64px;
+	text-transform: capitalize;
+	margin-bottom: 0;
+}
 /***************************** END *********************************/
 
 /************** navbar + section-home + section-about **************/
 #navbar {
-	text-align: center;
 	margin: auto;
-	margin-bottom: 10vh;
-	width: 50%;
-	min-width: 850px;
+	margin-top: 0;
+	width: 850px;
+	height: 20vh;
+	overflow: auto;
 }
-#navbar li{
-	display: inline;
+#navbar ul {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+}
+#navbar li {
+	display: inline-block;
 	margin: auto;
+	margin-left: 0.8em;
+	margin-right: 0.8em;
 	text-align: center;
+}
+#navbar a {
+	text-decoration: none;
+	font-size: 13px;
+	color: rgba(255, 255, 255, 0.8);
 }
 #section-home{
 	text-align: center;
-	margin-left: auto;
-	margin-right: auto;
-	width: 50%;
-	min-width: 850px;
-	height: 95vh;
-	overflow: auto;
+	margin: auto;
+	width: 850px;
+	height: 75vh;
+}
+#section-home p {
+	padding-bottom: 80px;
+}
+#section-home a {
+	padding: 15px;
+	border-width:  1px;
+	border-style: solid;
+	border-color: rgba(225, 255, 255, 0.8);
+	text-transform: uppercase;
+}
+#section-home a:hover {
+	color: #544d47;
+	background-color: rgba(225, 255, 255, 0.8);
 }
 #section-about {
     margin: 0 auto;
     background-color: white;
     width: 100%;
     overflow: auto;
-    
+    padding-top: 10em;
+    padding-bottom: 15em;
 }
 #section-about img,#section-about .descript {
 	min-width: 350px;
 	padding: 1%;
 	width: 31%;
 	float: left;
+}
+#section-about .descript {
+	margin-left: 1%;
+}
+#section-about h2 {
+	text-align: left;
+	padding-top: 0;
+	margin-top: 0;
+}
+.linkdown {
+	color: red;/*#005dd0 <-- this is blue*/
+	text-decoration: none;
 }
 /**************************** END **********************************/
 
@@ -67,20 +136,33 @@ body {
     background-color: white;
     width: 100%;
     overflow: auto;
+    padding-bottom: 5em;
 }
-#section-menu h2, .tabs {
+#section-menu .tabs {
 	text-align: center;
 	padding: 1em;
+	text-transform: uppercase;
+	font-weight: 300;
 }
 .tabs {
 	margin: auto;
+	margin-bottom: 5em;
 }
 .tabs li{
 	display: inline;
-	margin: auto;
+	margin: 1em;
 	text-align: center;
+}
+#section-menu .btn {
 	padding: 1.3em;
+	text-decoration: none;
+	
+	color: #868e96;
+}
+#section-menu .active {
 	border-style: solid;
+	border-width: 1px;
+	border-color: #212529;
 }
 .menucols ul {
 	width: 48%;
@@ -100,17 +182,26 @@ body {
 	padding-top: 20px;
 	text-align: center;
 	vertical-align: middle;
+	color: #212529;
+}
+#section-menu h3 {
+	font-weight: 300;
+	color: #212529;
 }
 /****************************** END *******************************/
 
 /********** delicious and nutritious + section-gallery ************/
-.dark > .content {
-	margin: auto;
-	overflow: auto;
-	margin-top: 10vh;
+.dark:not(#section-home) {
+	background-image: url(img/bg.jpg);
+	background-size: cover;
+	padding-top: 15vh;
+	padding-bottom: 20vh;
 }
-.dark > .content > p {
-	margin-bottom: 10vh;
+.dark:not(#section-home) .content {
+	margin: auto;
+}
+.dark:not(#section-home) h2 {
+	margin-bottom: 0;
 }
 #section-gallery {
 	margin: 0 auto;
@@ -118,11 +209,8 @@ body {
     width: 100%;
     overflow: auto;
     text-align: center;
+    padding-top: 5em;
     padding-bottom: 5em;
-}
-#section-gallery h2 {
-	text-align: center;
-	padding: 1em;
 }
 #section-gallery img {
 	padding: 1%;
@@ -134,15 +222,35 @@ body {
 /********************** section-testimonials **********************/
 #section-testimonials {
 	margin: 0 auto;
-    background-color: #aaaaff;
+    background-color: #e4f8f4;
     width: 100%;
     overflow: auto;
+    padding-top: 5em;
+    background-color: #f8f9fa;
+}
+#section-testimonials h2 {
+	margin-bottom: 0;
 }
 .testimonial {
 	text-align: center;
-	width: 31%;
+	width: 32%;
 	float: left;
-	padding: 1%;
+	padding: 0.5%;
+	font-family: Crimson Text;
+	color: black;
+}
+#section-testimonials blockquote::before{
+  content: "\201C";
+  height: 120px;
+  font-size: 100px;
+  display: block;
+}
+.rounded-circle {
+	width: 50px;
+	border-radius: 50%;
+}
+.nick {
+	color: rgba(0, 0, 0, 0.4);
 }
 
 /****************************** END *******************************/
@@ -150,19 +258,43 @@ body {
 /************************ section-events **************************/
 #section-events {
 	margin: 0 auto;
-    background-color: white;
+    background-color: #f8f9fa;
     width: 100%;
     overflow: auto;
-    
+    padding-top: 5em;
+    padding-bottom: 7em;
 }
-#section-events .card {
+.card-deck {
+      display: flex;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+}
+.card {
 	min-width: 350px;
-	padding: 1%;
+	min-height: 100%;
 	width: 31%;
-	float: left;
+	margin: 1%;
+	background-color: white;
 }
 .card-img-top {
     width: 100%;
+}
+.card-body {
+	margin: 25px;
+}
+.card-body h4 {
+	margin: 0;
+	font-size: 32px;
+	font-weight: 300;
+	line-height: 1.2;
+}
+.card-body a {
+	color: red;
+	text-decoration: none;
+}
+.card-body p {
+	margin-top: 5px;
 }
 /*************************** END **********************************/
 
@@ -170,7 +302,12 @@ body {
 #footer {
 	margin: 0 auto;
 	text-align: center;
-	background-color: white;
+	background-color: #f8f9fa;
 	overflow: auto;
+	padding: 3em;
+}
+#footer a {
+	text-decoration: none;
+	color: black;
 }
 /*************************** END **********************************/
